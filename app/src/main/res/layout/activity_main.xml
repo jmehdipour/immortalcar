@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            >
+
+            <ImageView
+                android:id="@+id/iv_main_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_search_white_32dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_main_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_drawer_white_32dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/iv_main_drawer"
+                android:layout_marginStart="8dp"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <FrameLayout
+            android:id="@+id/frame_main_fragmentContainer"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigation_main"/>
+
+        <FrameLayout
+            android:id="@+id/frame_main_progressBarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigation_main"
+            android:background="@android:color/white"
+
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray200"
+            android:layout_above="@id/bottomNavigation_main"
+            />
+
+        <com.ss.bottomnavigation.BottomNavigation
+            android:id="@+id/bottomNavigation_main"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            >
+
+
+            <com.ss.bottomnavigation.TabItem
+                android:id="@+id/tab_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_text="Home"
+                app:tab_text_color="@color/orangeBottomNavigation"
+                app:unselected_tab_icon="@drawable/ic_home_black_24dp"
+                app:tab_icon="@drawable/ic_home_orange_24dp"
+                app:unselected_tab_text_color="@color/black"
+                />
+            <com.ss.bottomnavigation.TabItem
+                android:id="@+id/tab_categories"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_text="Categories"
+                app:tab_text_color="@color/orangeBottomNavigation"
+                app:unselected_tab_text_color="@color/black"
+                app:unselected_tab_icon="@drawable/ic_category_black_24dp"
+                app:tab_icon="@drawable/ic_category_orange_24dp"
+                />
+            <com.ss.bottomnavigation.TabItem
+                android:id="@+id/tab_favorites"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_text="Favorites"
+                app:unselected_tab_text_color="@color/black"
+                app:tab_text_color="@color/orangeBottomNavigation"
+                app:tab_icon="@drawable/ic_favorite_orange_24dp"
+                app:unselected_tab_icon="@drawable/ic_favorite_black_24dp"
+
+                />
+
+        </com.ss.bottomnavigation.BottomNavigation>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
