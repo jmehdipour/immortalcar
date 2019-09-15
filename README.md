@@ -4,6 +4,6 @@
 **+MVVM Architecture**  
 **+RxJava for Reactive Programming**
 **+Room Library**  
-**+Retrofite**  
+**+Retrofit**  
 **+Picasso**  
 **+Gson**
