@@ -18,7 +18,7 @@ public class CarCloudDataSource implements CarDataSource {
 
     public CarCloudDataSource() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.myjson.com/bins/")
+                .baseUrl("https://5f0c968611b7f600160560be.mockapi.io/english/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

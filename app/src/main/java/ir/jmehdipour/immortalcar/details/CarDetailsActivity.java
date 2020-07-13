@@ -3,6 +3,7 @@ package ir.jmehdipour.immortalcar.details;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -95,6 +96,8 @@ public class CarDetailsActivity extends BaseActivity {
                     @Override
                     public void onSuccess(Car car) {
                         CarDetailsActivity.this.car = car;
+                        Log.i("axurl", "onSuccess: "+car.getImageUrl());
+                        //Toast.makeText(CarDetailsActivity.this, car.getImageUrl(),Toast.LENGTH_SHORT).show();
                         Picasso.get().load(car.getImageUrl()).into(carImageIv);
                         carTitleTv.setText(car.getTitle());
                         descriptionTv.setText(car.getDescription());

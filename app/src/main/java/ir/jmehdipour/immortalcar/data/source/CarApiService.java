@@ -11,12 +11,12 @@ import ir.jmehdipour.immortalcar.data.model.Car;
 import retrofit2.http.GET;
 
 public interface CarApiService {
-    @GET("bmmsf")
+    @GET("cars")
     Flowable<List<Car>> getCars();
 
 
 
-    @GET("fc7fj")
+    @GET("bannerss")
     Single<List<Banner>> getBanners();
 
 }
